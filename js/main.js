@@ -11,11 +11,11 @@ function setup(){
     
     var constraints = {
         video: {
-            facingMode: "user"
+            //facingMode: "user"
             //facingMode: "environment"
-//            facingMode: { 
-//               exact: "environment"
-//           }
+            facingMode: { 
+               exact: "environment"
+           }
         },
         audio: false
     };
