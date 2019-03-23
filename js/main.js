@@ -94,7 +94,7 @@ Particle.prototype.run = function(){
 
 // Method to update position
 Particle.prototype.update = function(){
-    this.acceleration.x = 0.05 * cos(radians(rotationY));
+    this.acceleration.x = 0.05 * sin(radians(rotationY));
     this.acceleration.y = 0.05 * sin(radians(rotationX));
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
