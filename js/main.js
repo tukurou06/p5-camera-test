@@ -72,7 +72,10 @@ function draw(){
     fill('#fff');
     textSize(24);
     text(cnt,10,30);
-    text(accelerationX,10,60);
+    text(accelerationY  ,10,60);
+    text(pAccelerationY ,10,90);
+    text(rotationX      ,10,120);
+    text(pRotationY     ,10,150);
 
     cnt++;
 }
