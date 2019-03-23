@@ -15,7 +15,14 @@ let capture;
 let system;
 
 function setup(){
-    canvas = createCanvas(width_main, 400);
+    window.addEventListener("touchstart",function(event){
+        event.preventDefault();
+    }, {passive: false});
+    window.addEventListener("touchmove", function(event){
+        event.preventDefault();
+    }, {passive: false});
+
+    canvas = createCanvas(width_main, windowHeight);
     background(200);
     system = new ParticleSystem(createVector(width / 2, 50));
 
