@@ -1,0 +1,6 @@
+{
+    "short_name": "PWAテスト",
+    "name": "p5でPWAのテスト",
+    "start_url": "https://tukurou06.github.io/p5-camera-test/",
+    "display": "standalone"
+}
