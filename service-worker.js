@@ -1,4 +1,4 @@
-const CACHE_NAME = cache-v1;
+const CACHE_NAME = 'cache-v1';
 const urlsToCache = [
     './',
     './index.html',
@@ -12,7 +12,7 @@ const urlsToCache = [
 
 self.addEventListener('install', function(event){
     event.waitUntil(
-        caches.open(CACHE_NAME).then(function(cashe){
+        caches.open(CACHE_NAME).then(function(cache){
             return cache.addAll(urlsToCache); //リソースをすべて登録
         })
     );
