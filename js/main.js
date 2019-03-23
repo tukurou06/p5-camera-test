@@ -23,8 +23,8 @@ function setup(){
     }, {passive: false});
 
     canvas = createCanvas(width_main, windowHeight);
-    background(200);
-    system = new ParticleSystem(createVector(width / 2, 50));
+    background(51);
+    system = new ParticleSystem(createVector(width / 2, windowHeight / 2));
 
     /*
     let video_sorce_id;
@@ -62,7 +62,7 @@ function setup(){
 }
 
 function draw(){
-    background(230);
+    background(51);
 
     system.addParticl();
     system.run();
@@ -72,6 +72,7 @@ function draw(){
     fill('#fff');
     textSize(24);
     text(cnt,10,30);
+    text(accelerationX,10,60);
 
     cnt++;
 }
