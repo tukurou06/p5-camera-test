@@ -26,6 +26,13 @@ function setup(){
     background(51);
     system = new ParticleSystem(createVector(width / 2, windowHeight / 2));
 
+    capture = createCapture(VIDEO);
+    capture.size(640, 480);
+
+    // 元のビデオは隠す
+    capture.hide();    
+
+
     /*
     let video_sorce_id;
     let video_cnt = 0;
@@ -62,20 +69,34 @@ function setup(){
 }
 
 function draw(){
-    background(51);
+    //background(51);
+
+
+    //image(capture, 0, 0, 640, 480);
+
+    capture.loadPixels();
+    let d = pixelDensity();
+    let center = 1 * ( (640 * d ) * (240 * d) + (320 * d) ) ;
+    background(pixels[center], pixels[center + 1], pixels[center + 2]);
 
     system.addParticl();
     system.run();
 
-    //image(capture, 0, 0, 640, 480);
 
     fill('#fff');
     textSize(24);
     text(cnt,10,30);
+    /*
     text(rotationX ,10,60);
     text(rotationY ,10,90);
     text(rotationZ ,10,120);
-
+    */
+    /*
+    text(pixels[center] ,10,60);
+    text(pixels[center+1] ,10,90);
+    text(pixels[center+2] ,10,120);
+    text(pixels.length ,10,150);
+    */
     cnt++;
 }
 
